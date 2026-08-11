@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "convex-github-test",
+      "name": "convex-github-auth",
       "dependencies": {
         "@auth/core": "^0.41.3",
         "@base-ui/react": "^1.7.0",
