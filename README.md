@@ -2,6 +2,10 @@
 
 A small Next.js project built to explore GitHub authentication and reactive data with Convex.
 
+## Preview
+
+![Convex GitHub Auth](./public/preview.png)
+
 ## Features
 
 - GitHub OAuth authentication with Convex Auth
@@ -50,7 +54,7 @@ Next.js UI
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/convex-github-auth.git
+git clone https://github.com/elmehdibelhaj/convex-github-auth.git
 cd convex-github-auth
 ```
 
@@ -124,6 +128,18 @@ This project is intentionally small and is primarily a learning playground for u
 - TypeScript project configuration
 
 The `isConnected` field represents the application's current authentication state. It is not intended to be a production-grade online-presence system.
+
+## What I Learned
+
+This project helped me understand:
+
+- OAuth authentication with GitHub
+- Convex Auth and authenticated identities
+- Convex queries and mutations
+- Reactive updates in Convex
+- Connecting authenticated users to database records
+- Managing environment variables safely
+- Using ESLint and Prettier in a Next.js project
 
 ## License
 
