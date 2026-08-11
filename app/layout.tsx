@@ -15,6 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn("font-mono", jetbrainsMono.variable)}>
+      <title>Convex + GitHub Auth</title>
       <body>
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
