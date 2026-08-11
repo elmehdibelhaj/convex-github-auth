@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Convex GitHub Auth
+
+A small Next.js project built to explore GitHub authentication and reactive data with Convex.
+
+## Features
+
+- GitHub OAuth authentication with Convex Auth
+- Authenticated user data stored in Convex
+- Reactive Convex queries
+- Connection status stored in the user document
+- GitHub avatar, name, and email display
+- Sign in / sign out flow
+- ESLint and Prettier configuration
+- TypeScript
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Convex](https://www.convex.dev/)
+- [Convex Auth](https://labs.convex.dev/auth)
+- [GitHub OAuth](https://github.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Bun](https://bun.sh/)
+
+## How It Works
+
+The application uses Convex Auth to authenticate users with GitHub.
+
+After authentication, the app retrieves the current Convex user and displays their profile information. The connection status is stored directly in the Convex user document and updates the UI reactively.
+
+```text
+GitHub
+   ↓
+Convex Auth
+   ↓
+Authenticated user
+   ↓
+Convex users table
+   ↓
+Reactive Convex query
+   ↓
+Next.js UI
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/YOUR_USERNAME/convex-github-auth.git
+cd convex-github-auth
+```
+
+### 2. Install dependencies
+
+Using Bun:
+
+```bash
+bun install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file:
+
+```env
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
+NEXT_PUBLIC_CONVEX_SITE_URL=
+```
+
+Your Convex deployment values can be obtained when setting up the Convex project.
+
+### 4. Start the development server
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+Format the project:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bun format
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Check formatting:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+bun format:check
+```
 
-## Deploy on Vercel
+Run ESLint:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+bun lint
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Build the application:
+
+```bash
+bun run build
+```
+
+## Notes
+
+This project is intentionally small and is primarily a learning playground for understanding:
+
+- OAuth authentication
+- Convex Auth
+- Convex queries and mutations
+- Reactive data
+- Next.js client components
+- TypeScript project configuration
+
+The `isConnected` field represents the application's current authentication state. It is not intended to be a production-grade online-presence system.
+
+## License
+
+MIT
